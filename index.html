@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenkins Demo App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 { font-size: 3em; margin-bottom: 20px; }
+        .build-info { 
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Jenkins CI/CD Demo</h1>
+        <p>This application is automatically built and tested by Jenkins!</p>
+        <div class="build-info">
+            <p><strong>Version:</strong> 1.0.0</p>
+            <p><strong>Environment:</strong> Development</p>
+            <p id="timestamp"></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('timestamp').innerHTML = 
+            '<strong>Built at:</strong> ' + new Date().toLocaleString();
+    </script>
+</body>
+</html>
